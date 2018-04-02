@@ -10,6 +10,10 @@ export default class FirebaseService {
     return database.ref('/groceries/').once('value');
   }
 
+  static getStaples() {
+    return database.ref('/staples/').once('value');
+  }
+
   static addToGrocery(key) {
     let groceryRef = database.ref('/groceries/' + key);
     groceryRef.transaction((grocery) => {
@@ -19,6 +23,18 @@ export default class FirebaseService {
         }
       }
       return grocery;
+    });
+  }
+
+  static addGrocery(groceryItem) {
+    let groceryRef = database.ref('/groceries/' + groceryItem.key);
+    groceryRef.transaction((grocery) => {
+      if (grocery) {
+        grocery.quantity += groceryItem.quantity;
+        return grocery;
+      } else {
+        return groceryItem;
+      }
     });
   }
 }

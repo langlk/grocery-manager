@@ -1,17 +1,95 @@
 {
-  "groceries": {
+  "staples": {
+    "0": {
+      "name": "butter",
+      "unit": "pounds"
+    },
     "1": {
-      "item": "milk",
+      "name": "eggs",
+      "unit": "fives of dozens"
+    },
+    "2": {
+      "name": "olive oil",
+      "unit": "quarts"
+    },
+    "3": {
+      "name": "flour",
+      "unit": "pounds"
+    },
+    "4": {
+      "name": "potatoes",
+      "unit": "pounds"
+    },
+    "5": {
+      "name": "vanilla",
+      "unit": "fl. ounces"
+    },
+    "6": {
+      "name": "garlic",
+      "unit": "bulbs"
+    },
+    "7": {
+      "name": "milk",
+      "unit": "gallon"
+    },
+    "8": {
+      "name": "rice",
+      "unit": "pounds"
+    },
+    "9": {
+      "name": "bread",
+      "unit": "loaves"
+    },
+    "10": {
+      "name": "cheese",
+      "unit": "pounds"
+    },
+    "11": {
+      "name": "pasta",
+      "unit": "ounces"
+    },
+    "12": {
+      "name": "baking soda",
+      "unit": "ounces"
+    },
+    "13": {
+      "name": "baking powder",
+      "unit": "ounces"
+    },
+    "14": {
+      "name": "granulated sugar",
+      "unit": "pounds"
+    },
+    "15": {
+      "name": "onions",
+      "unit": "pounds"
+    },
+    "16": {
+      "name": "bagels",
+      "unit": "bagels"
+    },
+    "17": {
+      "name": "english muffins",
+      "unit": "muffins"
+    },
+    "18": {
+      "name": "powdered sugar",
+      "unit": "ounces"
+    }
+  },
+  "groceries": {
+    "7": {
+      "name": "milk",
       "quantity": 0,
       "unit": "gallons"
     },
-    "2": {
-      "item": "eggs",
+    "3": {
+      "name": "eggs",
       "quantity": 5,
       "unit": "dozens"
     },
-    "3": {
-      "item": "bread",
+    "9": {
+      "name": "bread",
       "quantity": 4,
       "unit": "loaves"
     }
