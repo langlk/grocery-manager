@@ -6,11 +6,9 @@ import FirebaseService from '../services/FirebaseService';
 export default class ListContainer extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       groceries: null
     }
-
     this.addGrocery = this.addGrocery.bind(this);
   }
 
@@ -42,7 +40,6 @@ export default class ListContainer extends React.Component {
   }
 
   addGrocery(key) {
-    console.log('adding 1 to ', key);
     FirebaseService.addToGrocery(key);
     this.getGroceries();
   }

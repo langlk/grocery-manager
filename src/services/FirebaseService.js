@@ -20,6 +20,5 @@ export default class FirebaseService {
       }
       return grocery;
     });
-    return groceryRef.once('value');
   }
 }
