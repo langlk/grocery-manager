@@ -10,19 +10,29 @@ export default class ListContainer extends React.Component {
     this.state = {
       groceries: null
     }
+
+    this.addGrocery = this.addGrocery.bind(this);
   }
 
   componentWillMount() {
+    this.getGroceries();
+  }
+
+  formatGrocery(groceryRef) {
+    return {
+      key: groceryRef.key,
+      item: groceryRef.child('item').val(),
+      quantity: groceryRef.child('quantity').val(),
+      unit: groceryRef.child('unit').val()
+    };
+  }
+
+  getGroceries() {
     FirebaseService.getGroceries()
       .then((groceries) => {
         let groceryList = [];
         groceries.forEach((grocery) => {
-          groceryList.push({
-            id: grocery.key,
-            item: grocery.child('item').val(),
-            quantity: grocery.child('quantity').val(),
-            unit: grocery.child('unit').val()
-          });
+          groceryList.push(this.formatGrocery(grocery));
         });
         this.setState({ groceries: groceryList });
       })
@@ -31,9 +41,18 @@ export default class ListContainer extends React.Component {
       });
   }
 
+  addGrocery(key) {
+    console.log('adding 1 to ', key);
+    FirebaseService.addToGrocery(key);
+    this.getGroceries();
+  }
+
   render() {
     return (
-      <List groceries={this.state.groceries} />
+      <List
+        groceries={this.state.groceries}
+        addGrocery={this.addGrocery}
+      />
     );
   }
 }
