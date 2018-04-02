@@ -4,9 +4,12 @@
 
 ## TODO:
 
+#### Top Priority
+
 * Prompt to send order when sufficient quantity of groceries
 * Reset after order
 * Authentication
+* Form to add new item
 * Group staples vs individual purchases
 * Undo on adding things
 
