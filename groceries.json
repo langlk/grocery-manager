@@ -1,7 +1,19 @@
 {
   "groceries": {
-    "1": "milk",
-    "2": "eggs",
-    "3": "bread"
+    "1": {
+      "item": "milk",
+      "quantity": 0,
+      "unit": "gallons"
+    },
+    "2": {
+      "item": "eggs",
+      "quantity": 5,
+      "unit": "dozens"
+    },
+    "3": {
+      "item": "bread",
+      "quantity": 4,
+      "unit": "loaves"
+    }
   }
 }

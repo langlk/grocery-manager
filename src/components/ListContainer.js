@@ -17,7 +17,12 @@ export default class ListContainer extends React.Component {
       .then((groceries) => {
         let groceryList = [];
         groceries.forEach((grocery) => {
-          groceryList.push({ id: grocery.key, item: grocery.val() });
+          groceryList.push({
+            id: grocery.key,
+            item: grocery.child('item').val(),
+            quantity: grocery.child('quantity').val(),
+            unit: grocery.child('unit').val()
+          });
         });
         this.setState({ groceries: groceryList });
       })
