@@ -1,8 +1,14 @@
 import React from 'react';
 
 const List = (props) => {
+  const groceries = props.groceries ? props.groceries.map((grocery) => {
+    return <p key={grocery.id}>{grocery.item}</p>;
+  }) : null;
+
   return (
-    <p>This is our list view.</p>
+    <div>
+      {groceries}
+    </div>
   );
 };
 

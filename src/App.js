@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import ListContainer from './components/ListContainer.js';
+import ListContainer from './components/ListContainer';
 
 class App extends Component {
   render() {
